@@ -26,7 +26,7 @@ public class Main {
             rand = random.nextInt(1, 5)+n;
             switch (rand) {
                 case 1:
-                    commandHeroes.add(new Crossbower(getName()));
+                    commandHeroes.add(new Crossbower(getName(),i, i));
                     break;
                 case 2:
                     commandHeroes.add(new Monk(getName()));
