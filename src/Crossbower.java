@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Crossbower extends Hero {
 
 
@@ -15,5 +17,10 @@ protected Vector2 position;
     @Override
     public String toString() {
         return ("Арбалетчик: " + nameHero + " Здоровье " + health + "/" + healthMax + " Броня: " + armor);
+    }
+
+    @Override
+    public void gameStep(ArrayList<Hero> teamEnemy, ArrayList<Hero> teamAllias) {
+        
     }
 }

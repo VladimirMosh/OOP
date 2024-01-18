@@ -1,7 +1,8 @@
 
 
-
-public abstract class Hero {
+import java.util.ArrayList;
+import Interfaces.Gamel;
+public class Hero {
 
     protected int health, healthMax, armor;
     protected int[] damage;
@@ -17,6 +18,16 @@ public abstract class Hero {
         this.nameHero = nameHero;
         this.position = new Vector2(posX, posY);
     }
+    public void printEnemyDistance(ArrayList<Hero> enemys){
+        enemys.forEach(n-> System.out.print(position.rangeEnemy(n.position)+", "));
+        System.out.println();
+    }
 
+    /**
+     * @param teamEnemy
+     * @param teamAllias
+     */
+    public void gameStep(ArrayList<Hero> teamEnemy, ArrayList<Hero> teamAllias) {
 
+    }
 }
