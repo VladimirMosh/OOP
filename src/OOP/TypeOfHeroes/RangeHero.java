@@ -3,7 +3,7 @@ package OOP.TypeOfHeroes;
 import OOP.Hero;
 
 import java.util.ArrayList;
-import java.util.Random;
+
 
 
 public abstract class RangeHero extends Hero {
@@ -20,7 +20,7 @@ public abstract class RangeHero extends Hero {
         this.rangeMaxDamage = rangeMaxDamage;
     }
 
-    public Hero findBestEnemyRDD(ArrayList<Hero> enemys) {
+    protected Hero findBestEnemyRDD(ArrayList<Hero> enemys) {
         Hero heroTMP = enemys.get(0);
         for (int i = 0; i < enemys.size(); i++) {
             if (heroTMP.health < 1) {
@@ -42,7 +42,7 @@ public abstract class RangeHero extends Hero {
 
     @Override
     public String toString() {
-        return (nameHero + " здоровье: " + health + "/" + healthMax + " броня: " + armor + " Выстрелы " + this.quantityShots + "/" + this.quantityShotsMax);
+        return (nameHero + " здоровье: " + health + "/" + healthMax +  " Выстрелы " + this.quantityShots + "/" + this.quantityShotsMax);
     }
 
     @Override

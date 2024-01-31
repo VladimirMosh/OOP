@@ -44,9 +44,9 @@ public class Main {
             scanner.nextLine();
         }
         if (flag){
-            System.out.println("Победила команда белых");
+            System.out.println("Победа белых!");
         } else {
-            System.out.println("Победила команда черных");
+            System.out.println("Победа черных!");
         }
 
 

@@ -19,7 +19,7 @@ public abstract class HealerHero extends Hero {
     }
 
 
-    public void getHealing(Hero target) {
+    protected void getHealing(Hero target) {
         manaCost = 10;
         if (this.mana >= manaCost) {
             if (target.health > 0 && target.health < target.healthMax) {
@@ -33,7 +33,7 @@ public abstract class HealerHero extends Hero {
         }
     }
 
-    public void getResp(ArrayList<Hero> teamAllies, ArrayList<Hero> teamEnemy) {
+    protected void getResp(ArrayList<Hero> teamAllies, ArrayList<Hero> teamEnemy) {
         if (!flagRes && random.nextInt(0,5) != 4){
             return;
         }
@@ -62,7 +62,7 @@ public abstract class HealerHero extends Hero {
         }
     }
 
-    public Hero findMinHealthAllies(ArrayList<Hero> allies) {
+    protected Hero findMinHealthAllies(ArrayList<Hero> allies) {
         Hero heroTMP = allies.get(0);
         for (Hero ally : allies) {
             if (heroTMP.health > ally.health && ally.health > 0) {
@@ -74,7 +74,7 @@ public abstract class HealerHero extends Hero {
 
     @Override
     public String toString() {
-        return (nameHero + " здоровье: " + health + "/" + healthMax + " броня: " + armor);
+        return (nameHero + " здоровье: " + health + "/" + healthMax + " мана: " + mana + "/" + manaMax);
     }
 
     @Override
